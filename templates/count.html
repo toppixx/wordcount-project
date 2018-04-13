@@ -1,0 +1,20 @@
+<h1> There are {{count}} words in your text</h1>
+<br />
+<a href=" {% url 'home' %}"> Start Again </a>
+<br />
+
+<form>
+<input type='submit'  value='go to About' name='aboutButton'/>
+</form>
+<br />
+
+<h1> Your Fulltext: </h1>
+{{textBox}}
+
+
+<h1> wordcount </h1>
+{% for word, countWord in sortedwordDictionary%}
+<br />
+{{word}}: {{countWord}}
+<br />
+{% endfor %}
